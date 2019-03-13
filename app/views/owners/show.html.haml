@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %strong Name:
+  = @owner.name
+%p
+  %strong Email:
+  = @owner.email
+%p
+  %strong Contact no:
+  = @owner.contact_no
+%p
+  %strong Address:
+  = @owner.address
+= link_to 'Edit', edit_owner_path(@owner)
+|
+= link_to 'Back', owners_path

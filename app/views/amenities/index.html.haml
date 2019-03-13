@@ -1,0 +1,16 @@
+%p#notice= notice
+%h1 Amenities
+%table
+  %thead
+    %tr
+      %th Name
+      %th{:colspan => "3"}
+  %tbody
+    - @amenities.each do |amenity|
+      %tr
+        %td= amenity.name
+        %td= link_to 'Show', amenity
+        %td= link_to 'Edit', edit_amenity_path(amenity)
+        %td= link_to 'Destroy', amenity, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Amenity', new_amenity_path

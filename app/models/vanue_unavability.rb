@@ -1,0 +1,3 @@
+class VanueUnavability < ApplicationRecord
+  
+end

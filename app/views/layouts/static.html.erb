@@ -1,0 +1,559 @@
+<form id="leftpanel_form" action="/ind/delhi/venues-search" name="leftpanel_form" method="post" class="leftpanel_form">
+<input type="hidden" name="page_post_event" value="no_url_found">
+<input type="hidden" name="city" class="city" value="1">
+<div class="row venue-fltr-txt">
+	<h4>Filter Search
+	<span class="venue-search-bsc-txt text-right" style="cursor: pointer; float: right;" onclick="clearSearch();"><u>Clear</u></span>
+	</h4>
+</div>
+<!--Event Type Filter-->
+<div class="row">
+	<span class="venue-fltr-hdng">Event</span>&nbsp;
+	<select name="event_type" class="form-control input-lg venue-search-city event_type_drop flt-sel">
+		<option value="">Select Event</option>
+					<option value="25">Holi Party</option>
+					<option value="1">Wedding</option>
+					<option value="4">Birthday Party</option>
+					<option value="2">Kids Birthday Party</option>
+					<option value="22">Cocktail Party</option>
+					<option value="6">Anniversary</option>
+					<option value="7">Engagement</option>
+					<option value="8">Reception</option>
+					<option value="9">Sangeet Ceremony</option>
+					<option value="10">Mehndi Ceremony</option>
+					<option value="23">Roka</option>
+					<option value="11">Bachelor Party</option>
+					<option value="5">Baby Shower</option>
+					<option value="20">Pool Party</option>
+					<option value="21">Kitty Party</option>
+					<option value="13">Conference</option>
+					<option value="14">Corporate Event</option>
+					<option value="15">Meeting</option>
+					<option value="16">Office Party</option>
+					<option value="17">Team Building</option>
+					<option value="18">Training</option>
+					<option value="19">Exhibition</option>
+					<option value="12">Social Gathering</option>
+					<option value="24">New Year Party</option>
+					<option value="3">Lohri Party</option>
+
+	</select>
+</div>
+<!--filter ends-->
+
+<!--Venue Type Filter-->
+<div class="row">
+	<div class="venue-fltr-hdng">Venue Type</div>
+	<div style="max-height: 116px; clear: both;overflow:auto;">
+
+		<input class="magic-checkbox chkbox flt-chk venue_typecheckbox" type="checkbox" name="venue_typecheckbox[]" id="chk3" checked="checked" value="3">
+		<label for="chk3">Banquet Hall</label>
+
+		<input class="magic-checkbox chkbox flt-chk venue_typecheckbox" type="checkbox" name="venue_typecheckbox[]" id="chk5" value="5">
+		<label for="chk5">Farm House</label>
+
+		<input class="magic-checkbox chkbox flt-chk venue_typecheckbox" type="checkbox" name="venue_typecheckbox[]" id="chk1" value="1">
+		<label for="chk1">Hotels</label>
+
+		<input class="magic-checkbox chkbox flt-chk venue_typecheckbox" type="checkbox" name="venue_typecheckbox[]" id="chk4" value="4">
+		<label for="chk4">Restaurant</label>
+
+		<input class="magic-checkbox chkbox flt-chk venue_typecheckbox" type="checkbox" name="venue_typecheckbox[]" id="chk7" value="7">
+		<label for="chk7">Cafe</label>
+
+		<input class="magic-checkbox chkbox flt-chk venue_typecheckbox" type="checkbox" name="venue_typecheckbox[]" id="chk2" value="2">
+		<label for="chk2">Party Lawn</label>
+
+		<input class="magic-checkbox chkbox flt-chk venue_typecheckbox" type="checkbox" name="venue_typecheckbox[]" id="chk8" value="8">
+		<label for="chk8">Conference Room</label>
+
+		<input class="magic-checkbox chkbox flt-chk venue_typecheckbox" type="checkbox" name="venue_typecheckbox[]" id="chk11" value="11">
+		<label for="chk11">Resort</label>
+
+		<input class="magic-checkbox chkbox flt-chk venue_typecheckbox" type="checkbox" name="venue_typecheckbox[]" id="chk6" value="6">
+		<label for="chk6">Bar /Pub</label>
+	 	</div>
+</div>
+<!--filter ends-->
+
+<!--City Zone Filter-->
+<div class="row">
+	<div class="venue-fltr-hdng">Zone<span onclick="clearSearchZone();" style="cursor: pointer;float: right;" class="pos-on-mobile venue-search-clear-txt text-right">Clear Zone</span></div>
+	<div style="max-height: 116px; clear: both;overflow:auto;">
+		<input class="magic-radio flt-chk cityzoneradio" type="radio" name="city_zone" id="city_zone_3" value="3">
+	<label for="city_zone_3">North Delhi</label>
+		<input class="magic-radio flt-chk cityzoneradio" type="radio" name="city_zone" id="city_zone_4" value="4">
+	<label for="city_zone_4">South Delhi</label>
+		<input class="magic-radio flt-chk cityzoneradio" type="radio" name="city_zone" id="city_zone_2" value="2">
+	<label for="city_zone_2">East Delhi</label>
+		<input class="magic-radio flt-chk cityzoneradio" type="radio" name="city_zone" id="city_zone_1" value="1">
+	<label for="city_zone_1">West Delhi</label>
+		<input class="magic-radio flt-chk cityzoneradio" type="radio" name="city_zone" id="city_zone_5" value="5">
+	<label for="city_zone_5">Central Delhi</label>
+		<input class="magic-radio flt-chk cityzoneradio" type="radio" name="city_zone" id="city_zone_7" value="7">
+	<label for="city_zone_7">North West Delhi</label>
+		<input class="magic-radio flt-chk cityzoneradio" type="radio" name="city_zone" id="city_zone_9" value="9">
+	<label for="city_zone_9">South West Delhi</label>
+
+	</div>
+</div>
+<!--filter ends-->
+
+<!--City Area Filter-->
+<div class="row" style="padding-right: 0px;">
+	<div class="venue-fltr-hdng">Area</div>
+	<div style="max-height: 230px; clear: both;overflow:auto;">
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6038" value="6038">
+		<label for="chk_area6038">Adarsh Nagar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5983" value="5983">
+		<label for="chk_area5983">Aerocity</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5953" value="5953">
+		<label for="chk_area5953">Alipur</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6058" value="6058">
+		<label for="chk_area6058">Anand Vihar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area38" value="38">
+		<label for="chk_area38">Ashok Vihar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5976" value="5976">
+		<label for="chk_area5976">Aya Nagar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5977" value="5977">
+		<label for="chk_area5977">Badarpur</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5954" value="5954">
+		<label for="chk_area5954">Bakoli</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6066" value="6066">
+		<label for="chk_area6066">Bijwasan</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6045" value="6045">
+		<label for="chk_area6045">Budh Vihar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6039" value="6039">
+		<label for="chk_area6039">Burari</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area48" value="48">
+		<label for="chk_area48">Chanakyapuri</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area14" value="14">
+		<label for="chk_area14">Chattarpur</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6046" value="6046">
+		<label for="chk_area6046">Civil Lines</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6033" value="6033">
+		<label for="chk_area6033">Connaught Place</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5994" value="5994">
+		<label for="chk_area5994">Daryaganj</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area11" value="11">
+		<label for="chk_area11">Dwarka</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5960" value="5960">
+		<label for="chk_area5960">East of Kailash</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6051" value="6051">
+		<label for="chk_area6051">Geeta Colony</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area26" value="26">
+		<label for="chk_area26">Ghazipur</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5979" value="5979">
+		<label for="chk_area5979">Ghitorni</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6060" value="6060">
+		<label for="chk_area6060">Gokulpuri</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5961" value="5961">
+		<label for="chk_area5961">Greater kailash 1</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area18" value="18">
+		<label for="chk_area18">Greater Kailash II</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area31" value="31">
+		<label for="chk_area31">Green Park</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5974" value="5974">
+		<label for="chk_area5974">GT Karnal Road</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area51" value="51">
+		<label for="chk_area51">Hari Nagar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area34" value="34">
+		<label for="chk_area34">Hauz Khas</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6065" value="6065">
+		<label for="chk_area6065">Jamia Nagar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area1" value="1">
+		<label for="chk_area1">Janakpuri</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6061" value="6061">
+		<label for="chk_area6061">Jasola</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6059" value="6059">
+		<label for="chk_area6059">Jhilmil</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5958" value="5958">
+		<label for="chk_area5958">Kalkaji</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6014" value="6014">
+		<label for="chk_area6014">Kamla Nagar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6057" value="6057">
+		<label for="chk_area6057">Kanti Nagar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5955" value="5955">
+		<label for="chk_area5955">Kapashera</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5179" value="5179">
+		<label for="chk_area5179">Karam Pura</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6062" value="6062">
+		<label for="chk_area6062">Karawal Nagar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5969" value="5969">
+		<label for="chk_area5969">Karkardooma</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area19" value="19">
+		<label for="chk_area19">Karol Bagh</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5980" value="5980">
+		<label for="chk_area5980">Khan Market</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6056" value="6056">
+		<label for="chk_area6056">khureji Khas</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area46" value="46">
+		<label for="chk_area46">Kirti Nagar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area9" value="9">
+		<label for="chk_area9">Kotla Mubarakpur</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area13" value="13">
+		<label for="chk_area13">Lajpat Nagar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6067" value="6067">
+		<label for="chk_area6067">Lawrence Road</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5967" value="5967">
+		<label for="chk_area5967">Laxmi Nagar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area7" value="7">
+		<label for="chk_area7">Mahipalpur</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5234" value="5234">
+		<label for="chk_area5234">Malviya Nagar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6055" value="6055">
+		<label for="chk_area6055">Mandoli</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area32" value="32">
+		<label for="chk_area32">Mangolpuri</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6064" value="6064">
+		<label for="chk_area6064">Mansingh Road</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area25" value="25">
+		<label for="chk_area25">Mayapuri</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5966" value="5966">
+		<label for="chk_area5966">Mayur Vihar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5959" value="5959">
+		<label for="chk_area5959">Mehrauli</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5972" value="5972">
+		<label for="chk_area5972">Model Town</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area30" value="30">
+		<label for="chk_area30">Moti Nagar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6042" value="6042">
+		<label for="chk_area6042">Mukherjee Nagar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6043" value="6043">
+		<label for="chk_area6043">Mukhmelpur</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area53" value="53">
+		<label for="chk_area53">Mundka</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6063" value="6063">
+		<label for="chk_area6063">Mustafabad</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area10" value="10">
+		<label for="chk_area10">Najafgarh</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6018" value="6018">
+		<label for="chk_area6018">Najafgarh Road Industrial Area</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area28" value="28">
+		<label for="chk_area28">Nangloi</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6" value="6">
+		<label for="chk_area6">Naraina</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5982" value="5982">
+		<label for="chk_area5982">Nehru Place</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6053" value="6053">
+		<label for="chk_area6053">New Ashok Nagar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5956" value="5956">
+		<label for="chk_area5956">New Friends Colony</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6052" value="6052">
+		<label for="chk_area6052">Nilothi</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area23" value="23">
+		<label for="chk_area23">Okhla Industrial Estate</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area4" value="4">
+		<label for="chk_area4">Paschim Vihar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5952" value="5952">
+		<label for="chk_area5952">Patel Nagar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6050" value="6050">
+		<label for="chk_area6050">Patparganj</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area57" value="57">
+		<label for="chk_area57">Peeragarhi</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area20" value="20">
+		<label for="chk_area20">Pitampura</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5712" value="5712">
+		<label for="chk_area5712">Preet Vihar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5951" value="5951">
+		<label for="chk_area5951">Punjabi Bagh</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6040" value="6040">
+		<label for="chk_area6040">Pushpanjali</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5978" value="5978">
+		<label for="chk_area5978">Rajokri</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area47" value="47">
+		<label for="chk_area47">Rajouri Garden</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6054" value="6054">
+		<label for="chk_area6054">Ramesh Nagar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area50" value="50">
+		<label for="chk_area50">Rangpuri</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5981" value="5981">
+		<label for="chk_area5981">RK Puram</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area35" value="35">
+		<label for="chk_area35">Rohini</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6069" value="6069">
+		<label for="chk_area6069">Rohtak Road</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area17" value="17">
+		<label for="chk_area17">Safdarjung Enclave</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area39" value="39">
+		<label for="chk_area39">Saket</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5984" value="5984">
+		<label for="chk_area5984">Samalkha</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6047" value="6047">
+		<label for="chk_area6047">Sangam Vihar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5970" value="5970">
+		<label for="chk_area5970">Shahdara</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6006" value="6006">
+		<label for="chk_area6006">Shakarpur</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6041" value="6041">
+		<label for="chk_area6041">Shakti Nagar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area40" value="40">
+		<label for="chk_area40">Shalimar Bagh</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6068" value="6068">
+		<label for="chk_area6068">South Extension I</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5965" value="5965">
+		<label for="chk_area5965">Subhash Nagar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6049" value="6049">
+		<label for="chk_area6049">Sultanpur</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5964" value="5964">
+		<label for="chk_area5964">Tilak Nagar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6036" value="6036">
+		<label for="chk_area6036">Tri Nagar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area37" value="37">
+		<label for="chk_area37">Udyog Nagar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5991" value="5991">
+		<label for="chk_area5991">Uttam Nagar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area41" value="41">
+		<label for="chk_area41">Vasant Kunj</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5997" value="5997">
+		<label for="chk_area5997">Vasant Vihar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area6037" value="6037">
+		<label for="chk_area6037">Vikas Nagar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5992" value="5992">
+		<label for="chk_area5992">Vikaspuri</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area5968" value="5968">
+		<label for="chk_area5968">Vivek Vihar</label>
+
+		<input class="magic-checkbox chkbox flt-chk cityareacheckbox" type="checkbox" name="cityareacheckbox[]" id="chk_area29" value="29">
+		<label for="chk_area29">Wazirpur Industrial Area</label>
+		</div>
+</div>
+
+<!--Price Range Filter-->
+<div class="row">
+	<div class="venue-fltr-hdng">Price<span onclick="clearSearchPrice();" style="cursor: pointer;float: right;" class="pos-on-mobile venue-search-clear-txt text-right">Clear Price</span></div>
+			<input class="magic-radio flt-chk priceradio" type="radio" name="price_range" id="price_radio_1" value="0-1000">
+		<label for="price_radio_1">Below Rs. 1,000</label>
+			<input class="magic-radio flt-chk priceradio" type="radio" name="price_range" id="price_radio_2" value="1001-2000">
+		<label for="price_radio_2">Rs. 1,000 - 2,000</label>
+			<input class="magic-radio flt-chk priceradio" type="radio" name="price_range" id="price_radio_3" value="2001-99999">
+		<label for="price_radio_3">Rs. 2,000 and Above</label>
+
+</div>
+<!--filter ends-->
+
+<!--Capacity Range Filter-->
+<div class="row">
+	<div class="venue-fltr-hdng">Capacity<span onclick="clearSearchCapacity();" style="cursor: pointer;float: right;" class="pos-on-mobile venue-search-clear-txt text-right">Clear Capacity</span></div>
+			<input class="magic-radio flt-chk capacityradio" type="radio" name="capacity_range" id="capacity_radio_1" value="0-500">
+		<label for="capacity_radio_1">Upto 500 Guests</label>
+			<input class="magic-radio flt-chk capacityradio" type="radio" name="capacity_range" id="capacity_radio_2" value="501-1000">
+		<label for="capacity_radio_2">Upto 1,000 Guests</label>
+			<input class="magic-radio flt-chk capacityradio" type="radio" name="capacity_range" id="capacity_radio_3" value="1001-999999">
+		<label for="capacity_radio_3">2,000 Guests and Above</label>
+
+</div>
+<!--filter ends-->
+
+<!--Ameneties Filter-->
+<div class="row" style="padding-right: 0px;">
+	<div class="venue-fltr-hdng">Ameneties</div>
+	<div style="max-height: 170px; clear: both;overflow:auto;">
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn1" value="1">
+		<label for="chk_amn1">Power Backup</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn4" value="4">
+		<label for="chk_amn4">Air Condition</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn15" value="15">
+		<label for="chk_amn15">Parking Area</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn36" value="36">
+		<label for="chk_amn36">Indoor Seating</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn2" value="2">
+		<label for="chk_amn2">Outdoor Seating</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn7" value="7">
+		<label for="chk_amn7">In House Catering</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn8" value="8">
+		<label for="chk_amn8">Outside Catering Allowed</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn5" value="5">
+		<label for="chk_amn5">DJ</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn9" value="9">
+		<label for="chk_amn9">Internet</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn27" value="27">
+		<label for="chk_amn27">Swimming Pool</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn6" value="6">
+		<label for="chk_amn6">Outside Alcohol  Allowed</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn32" value="32">
+		<label for="chk_amn32">In House Restaurant</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn20" value="20">
+		<label for="chk_amn20">Hawan Allowed</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn16" value="16">
+		<label for="chk_amn16">Furniture</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn29" value="29">
+		<label for="chk_amn29">AV Equipment</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn28" value="28">
+		<label for="chk_amn28">Baarat Allowed</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn12" value="12">
+		<label for="chk_amn12">Heaters</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn30" value="30">
+		<label for="chk_amn30">Changing Room</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn22" value="22">
+		<label for="chk_amn22">Room Service</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn21" value="21">
+		<label for="chk_amn21">Smoking Area</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn35" value="35">
+		<label for="chk_amn35">Live Music</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn26" value="26">
+		<label for="chk_amn26">Fire Crackers Allowed</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn34" value="34">
+		<label for="chk_amn34">Guide Service</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn33" value="33">
+		<label for="chk_amn33">Taxi Service</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn23" value="23">
+		<label for="chk_amn23">Laundry Service</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn24" value="24">
+		<label for="chk_amn24">Beauty Salon</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn17" value="17">
+		<label for="chk_amn17">Service Staff</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn25" value="25">
+		<label for="chk_amn25">Spa</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn11" value="11">
+		<label for="chk_amn11">Bathroom</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn19" value="19">
+		<label for="chk_amn19">In House Decor</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn10" value="10">
+		<label for="chk_amn10">Stage</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn18" value="18">
+		<label for="chk_amn18">Guest Accomodation</label>
+
+		<input class="magic-checkbox chkbox flt-chk amenitycheckbox" type="checkbox" name="amenitycheckbox[]" id="chk_amn39" value="39">
+		<label for="chk_amn39">Alcohol Served</label>
+		</div>
+</div>
+</form>
+<%= render 'layouts/header' %>

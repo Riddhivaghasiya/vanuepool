@@ -1,0 +1,395 @@
+%form#leftpanel_form.leftpanel_form{:action => "/ind/delhi/venues-search", :method => "post", :name => "leftpanel_form"}
+  %input{:name => "page_post_event", :type => "hidden", :value => "no_url_found"}/
+  %input.city{:name => "city", :type => "hidden", :value => "1"}/
+  .row.venue-fltr-txt
+    %h4
+      Filter Search
+      %span.venue-search-bsc-txt.text-right{:onclick => "clearSearch();", :style => "cursor: pointer; float: right;"}
+        %u Clear
+  / Event Type Filter
+  .row
+    %span.venue-fltr-hdng> Event
+     
+    %select.form-control.input-lg.venue-search-city.event_type_drop.flt-sel{:name => "event_type"}
+      %option{:value => ""} Select Event
+      %option{:value => "25"} Holi Party
+      %option{:value => "1"} Wedding
+      %option{:value => "4"} Birthday Party
+      %option{:value => "2"} Kids Birthday Party
+      %option{:value => "22"} Cocktail Party
+      %option{:value => "6"} Anniversary
+      %option{:value => "7"} Engagement
+      %option{:value => "8"} Reception
+      %option{:value => "9"} Sangeet Ceremony
+      %option{:value => "10"} Mehndi Ceremony
+      %option{:value => "23"} Roka
+      %option{:value => "11"} Bachelor Party
+      %option{:value => "5"} Baby Shower
+      %option{:value => "20"} Pool Party
+      %option{:value => "21"} Kitty Party
+      %option{:value => "13"} Conference
+      %option{:value => "14"} Corporate Event
+      %option{:value => "15"} Meeting
+      %option{:value => "16"} Office Party
+      %option{:value => "17"} Team Building
+      %option{:value => "18"} Training
+      %option{:value => "19"} Exhibition
+      %option{:value => "12"} Social Gathering
+      %option{:value => "24"} New Year Party
+      %option{:value => "3"} Lohri Party
+  / filter ends
+  / Venue Type Filter
+  .row
+    .venue-fltr-hdng Venue Type
+    %div{:style => "max-height: 116px; clear: both;overflow:auto;"}
+      %input#chk3.magic-checkbox.chkbox.flt-chk.venue_typecheckbox{:checked => "checked", :name => "venue_typecheckbox[]", :type => "checkbox", :value => "3"}/
+      %label{:for => "chk3"} Banquet Hall
+      %input#chk5.magic-checkbox.chkbox.flt-chk.venue_typecheckbox{:name => "venue_typecheckbox[]", :type => "checkbox", :value => "5"}/
+      %label{:for => "chk5"} Farm House
+      %input#chk1.magic-checkbox.chkbox.flt-chk.venue_typecheckbox{:name => "venue_typecheckbox[]", :type => "checkbox", :value => "1"}/
+      %label{:for => "chk1"} Hotels
+      %input#chk4.magic-checkbox.chkbox.flt-chk.venue_typecheckbox{:name => "venue_typecheckbox[]", :type => "checkbox", :value => "4"}/
+      %label{:for => "chk4"} Restaurant
+      %input#chk7.magic-checkbox.chkbox.flt-chk.venue_typecheckbox{:name => "venue_typecheckbox[]", :type => "checkbox", :value => "7"}/
+      %label{:for => "chk7"} Cafe
+      %input#chk2.magic-checkbox.chkbox.flt-chk.venue_typecheckbox{:name => "venue_typecheckbox[]", :type => "checkbox", :value => "2"}/
+      %label{:for => "chk2"} Party Lawn
+      %input#chk8.magic-checkbox.chkbox.flt-chk.venue_typecheckbox{:name => "venue_typecheckbox[]", :type => "checkbox", :value => "8"}/
+      %label{:for => "chk8"} Conference Room
+      %input#chk11.magic-checkbox.chkbox.flt-chk.venue_typecheckbox{:name => "venue_typecheckbox[]", :type => "checkbox", :value => "11"}/
+      %label{:for => "chk11"} Resort
+      %input#chk6.magic-checkbox.chkbox.flt-chk.venue_typecheckbox{:name => "venue_typecheckbox[]", :type => "checkbox", :value => "6"}/
+      %label{:for => "chk6"} Bar /Pub
+  / filter ends
+  / City Zone Filter
+  .row
+    .venue-fltr-hdng
+      Zone
+      %span.pos-on-mobile.venue-search-clear-txt.text-right{:onclick => "clearSearchZone();", :style => "cursor: pointer;float: right;"} Clear Zone
+    %div{:style => "max-height: 116px; clear: both;overflow:auto;"}
+      %input#city_zone_3.magic-radio.flt-chk.cityzoneradio{:name => "city_zone", :type => "radio", :value => "3"}/
+      %label{:for => "city_zone_3"} North Delhi
+      %input#city_zone_4.magic-radio.flt-chk.cityzoneradio{:name => "city_zone", :type => "radio", :value => "4"}/
+      %label{:for => "city_zone_4"} South Delhi
+      %input#city_zone_2.magic-radio.flt-chk.cityzoneradio{:name => "city_zone", :type => "radio", :value => "2"}/
+      %label{:for => "city_zone_2"} East Delhi
+      %input#city_zone_1.magic-radio.flt-chk.cityzoneradio{:name => "city_zone", :type => "radio", :value => "1"}/
+      %label{:for => "city_zone_1"} West Delhi
+      %input#city_zone_5.magic-radio.flt-chk.cityzoneradio{:name => "city_zone", :type => "radio", :value => "5"}/
+      %label{:for => "city_zone_5"} Central Delhi
+      %input#city_zone_7.magic-radio.flt-chk.cityzoneradio{:name => "city_zone", :type => "radio", :value => "7"}/
+      %label{:for => "city_zone_7"} North West Delhi
+      %input#city_zone_9.magic-radio.flt-chk.cityzoneradio{:name => "city_zone", :type => "radio", :value => "9"}/
+      %label{:for => "city_zone_9"} South West Delhi
+  / filter ends
+  / City Area Filter
+  .row{:style => "padding-right: 0px;"}
+    .venue-fltr-hdng Area
+    %div{:style => "max-height: 230px; clear: both;overflow:auto;"}
+      %input#chk_area6038.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6038"}/
+      %label{:for => "chk_area6038"} Adarsh Nagar
+      %input#chk_area5983.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5983"}/
+      %label{:for => "chk_area5983"} Aerocity
+      %input#chk_area5953.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5953"}/
+      %label{:for => "chk_area5953"} Alipur
+      %input#chk_area6058.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6058"}/
+      %label{:for => "chk_area6058"} Anand Vihar
+      %input#chk_area38.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "38"}/
+      %label{:for => "chk_area38"} Ashok Vihar
+      %input#chk_area5976.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5976"}/
+      %label{:for => "chk_area5976"} Aya Nagar
+      %input#chk_area5977.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5977"}/
+      %label{:for => "chk_area5977"} Badarpur
+      %input#chk_area5954.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5954"}/
+      %label{:for => "chk_area5954"} Bakoli
+      %input#chk_area6066.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6066"}/
+      %label{:for => "chk_area6066"} Bijwasan
+      %input#chk_area6045.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6045"}/
+      %label{:for => "chk_area6045"} Budh Vihar
+      %input#chk_area6039.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6039"}/
+      %label{:for => "chk_area6039"} Burari
+      %input#chk_area48.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "48"}/
+      %label{:for => "chk_area48"} Chanakyapuri
+      %input#chk_area14.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "14"}/
+      %label{:for => "chk_area14"} Chattarpur
+      %input#chk_area6046.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6046"}/
+      %label{:for => "chk_area6046"} Civil Lines
+      %input#chk_area6033.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6033"}/
+      %label{:for => "chk_area6033"} Connaught Place
+      %input#chk_area5994.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5994"}/
+      %label{:for => "chk_area5994"} Daryaganj
+      %input#chk_area11.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "11"}/
+      %label{:for => "chk_area11"} Dwarka
+      %input#chk_area5960.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5960"}/
+      %label{:for => "chk_area5960"} East of Kailash
+      %input#chk_area6051.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6051"}/
+      %label{:for => "chk_area6051"} Geeta Colony
+      %input#chk_area26.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "26"}/
+      %label{:for => "chk_area26"} Ghazipur
+      %input#chk_area5979.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5979"}/
+      %label{:for => "chk_area5979"} Ghitorni
+      %input#chk_area6060.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6060"}/
+      %label{:for => "chk_area6060"} Gokulpuri
+      %input#chk_area5961.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5961"}/
+      %label{:for => "chk_area5961"} Greater kailash 1
+      %input#chk_area18.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "18"}/
+      %label{:for => "chk_area18"} Greater Kailash II
+      %input#chk_area31.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "31"}/
+      %label{:for => "chk_area31"} Green Park
+      %input#chk_area5974.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5974"}/
+      %label{:for => "chk_area5974"} GT Karnal Road
+      %input#chk_area51.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "51"}/
+      %label{:for => "chk_area51"} Hari Nagar
+      %input#chk_area34.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "34"}/
+      %label{:for => "chk_area34"} Hauz Khas
+      %input#chk_area6065.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6065"}/
+      %label{:for => "chk_area6065"} Jamia Nagar
+      %input#chk_area1.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "1"}/
+      %label{:for => "chk_area1"} Janakpuri
+      %input#chk_area6061.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6061"}/
+      %label{:for => "chk_area6061"} Jasola
+      %input#chk_area6059.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6059"}/
+      %label{:for => "chk_area6059"} Jhilmil
+      %input#chk_area5958.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5958"}/
+      %label{:for => "chk_area5958"} Kalkaji
+      %input#chk_area6014.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6014"}/
+      %label{:for => "chk_area6014"} Kamla Nagar
+      %input#chk_area6057.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6057"}/
+      %label{:for => "chk_area6057"} Kanti Nagar
+      %input#chk_area5955.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5955"}/
+      %label{:for => "chk_area5955"} Kapashera
+      %input#chk_area5179.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5179"}/
+      %label{:for => "chk_area5179"} Karam Pura
+      %input#chk_area6062.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6062"}/
+      %label{:for => "chk_area6062"} Karawal Nagar
+      %input#chk_area5969.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5969"}/
+      %label{:for => "chk_area5969"} Karkardooma
+      %input#chk_area19.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "19"}/
+      %label{:for => "chk_area19"} Karol Bagh
+      %input#chk_area5980.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5980"}/
+      %label{:for => "chk_area5980"} Khan Market
+      %input#chk_area6056.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6056"}/
+      %label{:for => "chk_area6056"} khureji Khas
+      %input#chk_area46.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "46"}/
+      %label{:for => "chk_area46"} Kirti Nagar
+      %input#chk_area9.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "9"}/
+      %label{:for => "chk_area9"} Kotla Mubarakpur
+      %input#chk_area13.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "13"}/
+      %label{:for => "chk_area13"} Lajpat Nagar
+      %input#chk_area6067.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6067"}/
+      %label{:for => "chk_area6067"} Lawrence Road
+      %input#chk_area5967.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5967"}/
+      %label{:for => "chk_area5967"} Laxmi Nagar
+      %input#chk_area7.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "7"}/
+      %label{:for => "chk_area7"} Mahipalpur
+      %input#chk_area5234.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5234"}/
+      %label{:for => "chk_area5234"} Malviya Nagar
+      %input#chk_area6055.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6055"}/
+      %label{:for => "chk_area6055"} Mandoli
+      %input#chk_area32.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "32"}/
+      %label{:for => "chk_area32"} Mangolpuri
+      %input#chk_area6064.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6064"}/
+      %label{:for => "chk_area6064"} Mansingh Road
+      %input#chk_area25.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "25"}/
+      %label{:for => "chk_area25"} Mayapuri
+      %input#chk_area5966.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5966"}/
+      %label{:for => "chk_area5966"} Mayur Vihar
+      %input#chk_area5959.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5959"}/
+      %label{:for => "chk_area5959"} Mehrauli
+      %input#chk_area5972.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5972"}/
+      %label{:for => "chk_area5972"} Model Town
+      %input#chk_area30.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "30"}/
+      %label{:for => "chk_area30"} Moti Nagar
+      %input#chk_area6042.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6042"}/
+      %label{:for => "chk_area6042"} Mukherjee Nagar
+      %input#chk_area6043.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6043"}/
+      %label{:for => "chk_area6043"} Mukhmelpur
+      %input#chk_area53.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "53"}/
+      %label{:for => "chk_area53"} Mundka
+      %input#chk_area6063.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6063"}/
+      %label{:for => "chk_area6063"} Mustafabad
+      %input#chk_area10.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "10"}/
+      %label{:for => "chk_area10"} Najafgarh
+      %input#chk_area6018.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6018"}/
+      %label{:for => "chk_area6018"} Najafgarh Road Industrial Area
+      %input#chk_area28.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "28"}/
+      %label{:for => "chk_area28"} Nangloi
+      %input#chk_area6.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6"}/
+      %label{:for => "chk_area6"} Naraina
+      %input#chk_area5982.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5982"}/
+      %label{:for => "chk_area5982"} Nehru Place
+      %input#chk_area6053.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6053"}/
+      %label{:for => "chk_area6053"} New Ashok Nagar
+      %input#chk_area5956.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5956"}/
+      %label{:for => "chk_area5956"} New Friends Colony
+      %input#chk_area6052.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6052"}/
+      %label{:for => "chk_area6052"} Nilothi
+      %input#chk_area23.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "23"}/
+      %label{:for => "chk_area23"} Okhla Industrial Estate
+      %input#chk_area4.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "4"}/
+      %label{:for => "chk_area4"} Paschim Vihar
+      %input#chk_area5952.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5952"}/
+      %label{:for => "chk_area5952"} Patel Nagar
+      %input#chk_area6050.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6050"}/
+      %label{:for => "chk_area6050"} Patparganj
+      %input#chk_area57.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "57"}/
+      %label{:for => "chk_area57"} Peeragarhi
+      %input#chk_area20.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "20"}/
+      %label{:for => "chk_area20"} Pitampura
+      %input#chk_area5712.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5712"}/
+      %label{:for => "chk_area5712"} Preet Vihar
+      %input#chk_area5951.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5951"}/
+      %label{:for => "chk_area5951"} Punjabi Bagh
+      %input#chk_area6040.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6040"}/
+      %label{:for => "chk_area6040"} Pushpanjali
+      %input#chk_area5978.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5978"}/
+      %label{:for => "chk_area5978"} Rajokri
+      %input#chk_area47.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "47"}/
+      %label{:for => "chk_area47"} Rajouri Garden
+      %input#chk_area6054.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6054"}/
+      %label{:for => "chk_area6054"} Ramesh Nagar
+      %input#chk_area50.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "50"}/
+      %label{:for => "chk_area50"} Rangpuri
+      %input#chk_area5981.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5981"}/
+      %label{:for => "chk_area5981"} RK Puram
+      %input#chk_area35.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "35"}/
+      %label{:for => "chk_area35"} Rohini
+      %input#chk_area6069.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6069"}/
+      %label{:for => "chk_area6069"} Rohtak Road
+      %input#chk_area17.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "17"}/
+      %label{:for => "chk_area17"} Safdarjung Enclave
+      %input#chk_area39.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "39"}/
+      %label{:for => "chk_area39"} Saket
+      %input#chk_area5984.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5984"}/
+      %label{:for => "chk_area5984"} Samalkha
+      %input#chk_area6047.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6047"}/
+      %label{:for => "chk_area6047"} Sangam Vihar
+      %input#chk_area5970.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5970"}/
+      %label{:for => "chk_area5970"} Shahdara
+      %input#chk_area6006.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6006"}/
+      %label{:for => "chk_area6006"} Shakarpur
+      %input#chk_area6041.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6041"}/
+      %label{:for => "chk_area6041"} Shakti Nagar
+      %input#chk_area40.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "40"}/
+      %label{:for => "chk_area40"} Shalimar Bagh
+      %input#chk_area6068.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6068"}/
+      %label{:for => "chk_area6068"} South Extension I
+      %input#chk_area5965.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5965"}/
+      %label{:for => "chk_area5965"} Subhash Nagar
+      %input#chk_area6049.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6049"}/
+      %label{:for => "chk_area6049"} Sultanpur
+      %input#chk_area5964.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5964"}/
+      %label{:for => "chk_area5964"} Tilak Nagar
+      %input#chk_area6036.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6036"}/
+      %label{:for => "chk_area6036"} Tri Nagar
+      %input#chk_area37.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "37"}/
+      %label{:for => "chk_area37"} Udyog Nagar
+      %input#chk_area5991.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5991"}/
+      %label{:for => "chk_area5991"} Uttam Nagar
+      %input#chk_area41.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "41"}/
+      %label{:for => "chk_area41"} Vasant Kunj
+      %input#chk_area5997.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5997"}/
+      %label{:for => "chk_area5997"} Vasant Vihar
+      %input#chk_area6037.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "6037"}/
+      %label{:for => "chk_area6037"} Vikas Nagar
+      %input#chk_area5992.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5992"}/
+      %label{:for => "chk_area5992"} Vikaspuri
+      %input#chk_area5968.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "5968"}/
+      %label{:for => "chk_area5968"} Vivek Vihar
+      %input#chk_area29.magic-checkbox.chkbox.flt-chk.cityareacheckbox{:name => "cityareacheckbox[]", :type => "checkbox", :value => "29"}/
+      %label{:for => "chk_area29"} Wazirpur Industrial Area
+  / Price Range Filter
+  .row
+    .venue-fltr-hdng
+      Price
+      %span.pos-on-mobile.venue-search-clear-txt.text-right{:onclick => "clearSearchPrice();", :style => "cursor: pointer;float: right;"} Clear Price
+    %input#price_radio_1.magic-radio.flt-chk.priceradio{:name => "price_range", :type => "radio", :value => "0-1000"}/
+    %label{:for => "price_radio_1"} Below Rs. 1,000
+    %input#price_radio_2.magic-radio.flt-chk.priceradio{:name => "price_range", :type => "radio", :value => "1001-2000"}/
+    %label{:for => "price_radio_2"} Rs. 1,000 - 2,000
+    %input#price_radio_3.magic-radio.flt-chk.priceradio{:name => "price_range", :type => "radio", :value => "2001-99999"}/
+    %label{:for => "price_radio_3"} Rs. 2,000 and Above
+  / filter ends
+  / Capacity Range Filter
+  .row
+    .venue-fltr-hdng
+      Capacity
+      %span.pos-on-mobile.venue-search-clear-txt.text-right{:onclick => "clearSearchCapacity();", :style => "cursor: pointer;float: right;"} Clear Capacity
+    %input#capacity_radio_1.magic-radio.flt-chk.capacityradio{:name => "capacity_range", :type => "radio", :value => "0-500"}/
+    %label{:for => "capacity_radio_1"} Upto 500 Guests
+    %input#capacity_radio_2.magic-radio.flt-chk.capacityradio{:name => "capacity_range", :type => "radio", :value => "501-1000"}/
+    %label{:for => "capacity_radio_2"} Upto 1,000 Guests
+    %input#capacity_radio_3.magic-radio.flt-chk.capacityradio{:name => "capacity_range", :type => "radio", :value => "1001-999999"}/
+    %label{:for => "capacity_radio_3"} 2,000 Guests and Above
+  / filter ends
+  / Ameneties Filter
+  .row{:style => "padding-right: 0px;"}
+    .venue-fltr-hdng Ameneties
+    %div{:style => "max-height: 170px; clear: both;overflow:auto;"}
+      %input#chk_amn1.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "1"}/
+      %label{:for => "chk_amn1"} Power Backup
+      %input#chk_amn4.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "4"}/
+      %label{:for => "chk_amn4"} Air Condition
+      %input#chk_amn15.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "15"}/
+      %label{:for => "chk_amn15"} Parking Area
+      %input#chk_amn36.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "36"}/
+      %label{:for => "chk_amn36"} Indoor Seating
+      %input#chk_amn2.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "2"}/
+      %label{:for => "chk_amn2"} Outdoor Seating
+      %input#chk_amn7.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "7"}/
+      %label{:for => "chk_amn7"} In House Catering
+      %input#chk_amn8.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "8"}/
+      %label{:for => "chk_amn8"} Outside Catering Allowed
+      %input#chk_amn5.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "5"}/
+      %label{:for => "chk_amn5"} DJ
+      %input#chk_amn9.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "9"}/
+      %label{:for => "chk_amn9"} Internet
+      %input#chk_amn27.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "27"}/
+      %label{:for => "chk_amn27"} Swimming Pool
+      %input#chk_amn6.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "6"}/
+      %label{:for => "chk_amn6"} Outside Alcohol  Allowed
+      %input#chk_amn32.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "32"}/
+      %label{:for => "chk_amn32"} In House Restaurant
+      %input#chk_amn20.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "20"}/
+      %label{:for => "chk_amn20"} Hawan Allowed
+      %input#chk_amn16.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "16"}/
+      %label{:for => "chk_amn16"} Furniture
+      %input#chk_amn29.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "29"}/
+      %label{:for => "chk_amn29"} AV Equipment
+      %input#chk_amn28.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "28"}/
+      %label{:for => "chk_amn28"} Baarat Allowed
+      %input#chk_amn12.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "12"}/
+      %label{:for => "chk_amn12"} Heaters
+      %input#chk_amn30.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "30"}/
+      %label{:for => "chk_amn30"} Changing Room
+      %input#chk_amn22.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "22"}/
+      %label{:for => "chk_amn22"} Room Service
+      %input#chk_amn21.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "21"}/
+      %label{:for => "chk_amn21"} Smoking Area
+      %input#chk_amn35.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "35"}/
+      %label{:for => "chk_amn35"} Live Music
+      %input#chk_amn26.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "26"}/
+      %label{:for => "chk_amn26"} Fire Crackers Allowed
+      %input#chk_amn34.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "34"}/
+      %label{:for => "chk_amn34"} Guide Service
+      %input#chk_amn33.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "33"}/
+      %label{:for => "chk_amn33"} Taxi Service
+      %input#chk_amn23.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "23"}/
+      %label{:for => "chk_amn23"} Laundry Service
+      %input#chk_amn24.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "24"}/
+      %label{:for => "chk_amn24"} Beauty Salon
+      %input#chk_amn17.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "17"}/
+      %label{:for => "chk_amn17"} Service Staff
+      %input#chk_amn25.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "25"}/
+      %label{:for => "chk_amn25"} Spa
+      %input#chk_amn11.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "11"}/
+      %label{:for => "chk_amn11"} Bathroom
+      %input#chk_amn19.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "19"}/
+      %label{:for => "chk_amn19"} In House Decor
+      %input#chk_amn10.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "10"}/
+      %label{:for => "chk_amn10"} Stage
+      %input#chk_amn18.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "18"}/
+      %label{:for => "chk_amn18"} Guest Accomodation
+      %input#chk_amn39.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "39"}/
+      %label{:for => "chk_amn39"} Alcohol Served
+= render 'layouts/header'

@@ -1,0 +1,176 @@
+%form#leftpanel_form.leftpanel_form{:action => "/ind/delhi/venues-search", :method => "post", :name => "leftpanel_form"}
+  %input{:name => "page_post_event", :type => "hidden", :value => "no_url_found"}/
+  %input.city{:name => "city", :type => "hidden", :value => "1"}/
+  .row.venue-fltr-txt
+    %h4
+      Filter Search
+      %span.venue-search-bsc-txt.text-right{:onclick => "clearSearch();", :style => "cursor: pointer; float: right;"}
+        %u Clear
+  / Event Type Filter
+  .row
+    %span.venue-fltr-hdng> Event
+     
+    %select.form-control.input-lg.venue-search-city.event_type_drop.flt-sel{:name => "event_type"}
+      %option{:value => ""} Select Event
+      %option{:value => "25"} Holi Party
+      %option{:value => "1"} Wedding
+      %option{:value => "4"} Birthday Party
+      %option{:value => "2"} Kids Birthday Party
+      %option{:value => "22"} Cocktail Party
+      %option{:value => "6"} Anniversary
+      %option{:value => "7"} Engagement
+      %option{:value => "8"} Reception
+      %option{:value => "9"} Sangeet Ceremony
+      %option{:value => "10"} Mehndi Ceremony
+      %option{:value => "23"} Roka
+      %option{:value => "11"} Bachelor Party
+      %option{:value => "5"} Baby Shower
+      %option{:value => "20"} Pool Party
+      %option{:value => "21"} Kitty Party
+      %option{:value => "13"} Conference
+      %option{:value => "14"} Corporate Event
+      %option{:value => "15"} Meeting
+      %option{:value => "16"} Office Party
+      %option{:value => "17"} Team Building
+      %option{:value => "18"} Training
+      %option{:value => "19"} Exhibition
+      %option{:value => "12"} Social Gathering
+      %option{:value => "24"} New Year Party
+  / filter ends
+  / Venue Type Filter
+  .row
+    .venue-fltr-hdng Venue Type
+    %div{:style => "max-height: 116px; clear: both;overflow:auto;"}
+      %input#chk3.magic-checkbox.chkbox.flt-chk.venue_typecheckbox{:checked => "checked", :name => "venue_typecheckbox[]", :type => "checkbox", :value => "3"}/
+      %label{:for => "chk3"} Banquet Hall
+      %input#chk5.magic-checkbox.chkbox.flt-chk.venue_typecheckbox{:name => "venue_typecheckbox[]", :type => "checkbox", :value => "5"}/
+      %label{:for => "chk5"} Farm House
+      %input#chk1.magic-checkbox.chkbox.flt-chk.venue_typecheckbox{:name => "venue_typecheckbox[]", :type => "checkbox", :value => "1"}/
+      %label{:for => "chk1"} Hotels
+      %input#chk4.magic-checkbox.chkbox.flt-chk.venue_typecheckbox{:name => "venue_typecheckbox[]", :type => "checkbox", :value => "4"}/
+      %label{:for => "chk4"} Restaurant
+      %input#chk7.magic-checkbox.chkbox.flt-chk.venue_typecheckbox{:name => "venue_typecheckbox[]", :type => "checkbox", :value => "7"}/
+      %label{:for => "chk7"} Cafe
+      %input#chk2.magic-checkbox.chkbox.flt-chk.venue_typecheckbox{:name => "venue_typecheckbox[]", :type => "checkbox", :value => "2"}/
+      %label{:for => "chk2"} Party Lawn
+      %input#chk8.magic-checkbox.chkbox.flt-chk.venue_typecheckbox{:name => "venue_typecheckbox[]", :type => "checkbox", :value => "8"}/
+      %label{:for => "chk8"} Conference Room
+      %input#chk11.magic-checkbox.chkbox.flt-chk.venue_typecheckbox{:name => "venue_typecheckbox[]", :type => "checkbox", :value => "11"}/
+      %label{:for => "chk11"} Resort
+      %input#chk6.magic-checkbox.chkbox.flt-chk.venue_typecheckbox{:name => "venue_typecheckbox[]", :type => "checkbox", :value => "6"}/
+      %label{:for => "chk6"} Bar /Pub
+  / filter ends
+  / City Zone Filter
+  .row
+    .venue-fltr-hdng
+      Zone
+      %span.pos-on-mobile.venue-search-clear-txt.text-right{:onclick => "clearSearchZone();", :style => "cursor: pointer;float: right;"} Clear Zone
+    %div{:style => "max-height: 116px; clear: both;overflow:auto;"}
+      %input#city_zone_3.magic-radio.flt-chk.cityzoneradio{:name => "city_zone", :type => "radio", :value => "3"}/
+      %label{:for => "city_zone_3"} North Delhi
+      %input#city_zone_4.magic-radio.flt-chk.cityzoneradio{:name => "city_zone", :type => "radio", :value => "4"}/
+      %label{:for => "city_zone_4"} South Delhi
+      %input#city_zone_2.magic-radio.flt-chk.cityzoneradio{:name => "city_zone", :type => "radio", :value => "2"}/
+      %label{:for => "city_zone_2"} East Delhi
+      %input#city_zone_1.magic-radio.flt-chk.cityzoneradio{:name => "city_zone", :type => "radio", :value => "1"}/
+      %label{:for => "city_zone_1"} West Delhi
+      %input#city_zone_5.magic-radio.flt-chk.cityzoneradio{:name => "city_zone", :type => "radio", :value => "5"}/
+      %label{:for => "city_zone_5"} Central Delhi
+      %input#city_zone_7.magic-radio.flt-chk.cityzoneradio{:name => "city_zone", :type => "radio", :value => "7"}/
+      %label{:for => "city_zone_7"} North West Delhi
+      %input#city_zone_9.magic-radio.flt-chk.cityzoneradio{:name => "city_zone", :type => "radio", :value => "9"}/
+      %label{:for => "city_zone_9"} South West Delhi
+  / filter ends
+  / Price Range Filter
+  .row
+    .venue-fltr-hdng
+      Price
+      %span.pos-on-mobile.venue-search-clear-txt.text-right{:onclick => "clearSearchPrice();", :style => "cursor: pointer;float: right;"} Clear Price
+    %input#price_radio_1.magic-radio.flt-chk.priceradio{:name => "price_range", :type => "radio", :value => "0-1000"}/
+    %label{:for => "price_radio_1"} Below Rs. 1,000
+    %input#price_radio_2.magic-radio.flt-chk.priceradio{:name => "price_range", :type => "radio", :value => "1001-2000"}/
+    %label{:for => "price_radio_2"} Rs. 1,000 - 2,000
+    %input#price_radio_3.magic-radio.flt-chk.priceradio{:name => "price_range", :type => "radio", :value => "2001-99999"}/
+    %label{:for => "price_radio_3"} Rs. 2,000 and Above
+  / filter ends
+  / Capacity Range Filter
+  .row
+    .venue-fltr-hdng
+      Capacity
+      %span.pos-on-mobile.venue-search-clear-txt.text-right{:onclick => "clearSearchCapacity();", :style => "cursor: pointer;float: right;"} Clear Capacity
+    %input#capacity_radio_1.magic-radio.flt-chk.capacityradio{:name => "capacity_range", :type => "radio", :value => "0-500"}/
+    %label{:for => "capacity_radio_1"} Upto 500 Guests
+    %input#capacity_radio_2.magic-radio.flt-chk.capacityradio{:name => "capacity_range", :type => "radio", :value => "501-1000"}/
+    %label{:for => "capacity_radio_2"} Upto 1,000 Guests
+    %input#capacity_radio_3.magic-radio.flt-chk.capacityradio{:name => "capacity_range", :type => "radio", :value => "1001-999999"}/
+    %label{:for => "capacity_radio_3"} 2,000 Guests and Above
+  / filter ends
+  / Ameneties Filter
+  .row{:style => "padding-right: 0px;"}
+    .venue-fltr-hdng Ameneties
+    %div{:style => "max-height: 170px; clear: both;overflow:auto;"}
+      %input#chk_amn1.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "1"}/
+      %label{:for => "chk_amn1"} Power Backup
+      %input#chk_amn4.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "4"}/
+      %label{:for => "chk_amn4"} Air Condition
+      %input#chk_amn15.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "15"}/
+      %label{:for => "chk_amn15"} Parking Area
+      %input#chk_amn36.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "36"}/
+      %label{:for => "chk_amn36"} Indoor Seating
+      %input#chk_amn2.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "2"}/
+      %label{:for => "chk_amn2"} Outdoor Seating
+      %input#chk_amn7.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "7"}/
+      %label{:for => "chk_amn7"} In House Catering
+      %input#chk_amn8.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "8"}/
+      %label{:for => "chk_amn8"} Outside Catering Allowed
+      %input#chk_amn5.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "5"}/
+      %label{:for => "chk_amn5"} DJ
+      %input#chk_amn9.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "9"}/
+      %label{:for => "chk_amn9"} Internet
+      %input#chk_amn27.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "27"}/
+      %label{:for => "chk_amn27"} Swimming Pool
+      %input#chk_amn6.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "6"}/
+      %label{:for => "chk_amn6"} Outside Alcohol  Allowed
+      %input#chk_amn32.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "32"}/
+      %label{:for => "chk_amn32"} In House Restaurant
+      %input#chk_amn20.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "20"}/
+      %label{:for => "chk_amn20"} Hawan Allowed
+      %input#chk_amn16.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "16"}/
+      %label{:for => "chk_amn16"} Furniture
+      %input#chk_amn29.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "29"}/
+      %label{:for => "chk_amn29"} AV Equipment
+      %input#chk_amn28.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "28"}/
+      %label{:for => "chk_amn28"} Baarat Allowed
+      %input#chk_amn12.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "12"}/
+      %label{:for => "chk_amn12"} Heaters
+      %input#chk_amn30.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "30"}/
+      %label{:for => "chk_amn30"} Changing Room
+      %input#chk_amn22.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "22"}/
+      %label{:for => "chk_amn22"} Room Service
+      %input#chk_amn21.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "21"}/
+      %label{:for => "chk_amn21"} Smoking Area
+      %input#chk_amn35.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "35"}/
+      %label{:for => "chk_amn35"} Live Music
+      %input#chk_amn26.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "26"}/
+      %label{:for => "chk_amn26"} Fire Crackers Allowed
+      %input#chk_amn34.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "34"}/
+      %label{:for => "chk_amn34"} Guide Service
+      %input#chk_amn33.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "33"}/
+      %label{:for => "chk_amn33"} Taxi Service
+      %input#chk_amn23.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "23"}/
+      %label{:for => "chk_amn23"} Laundry Service
+      %input#chk_amn24.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "24"}/
+      %label{:for => "chk_amn24"} Beauty Salon
+      %input#chk_amn17.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "17"}/
+      %label{:for => "chk_amn17"} Service Staff
+      %input#chk_amn25.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "25"}/
+      %label{:for => "chk_amn25"} Spa
+      %input#chk_amn11.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "11"}/
+      %label{:for => "chk_amn11"} Bathroom
+      %input#chk_amn19.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "19"}/
+      %label{:for => "chk_amn19"} In House Decor
+      %input#chk_amn10.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "10"}/
+      %label{:for => "chk_amn10"} Stage
+      %input#chk_amn18.magic-checkbox.chkbox.flt-chk.amenitycheckbox{:name => "amenitycheckbox[]", :type => "checkbox", :value => "18"}/
+      %label{:for => "chk_amn18"} Guest Accomodation
+      

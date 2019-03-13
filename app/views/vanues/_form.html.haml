@@ -1,0 +1,41 @@
+= form_with(model: vanue, local: true) do |form|
+  - if vanue.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(vanue.errors.count, "error")
+        prohibited this vanue from being saved:
+      %ul
+        - vanue.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :name
+    = form.text_field :name
+  .field
+    = form.label :address
+    = form.text_field :address
+  .field
+    = form.label :state
+    = form.text_field :state
+  .field
+    = form.label :city
+    = form.text_field :city
+  .field
+    = form.label :area
+    = form.text_field :area
+  .field
+    = form.label :latitude
+    = form.text_field :latitude
+  .field
+    = form.label :longitude
+    = form.text_field :longitude
+  .field
+    = form.label :guest_capacity
+    = form.number_field :guest_capacity
+  .field
+    = form.label :prize
+    = form.text_field :prize
+  .field
+    = form.label :description
+    = form.text_field :description
+  .actions
+    = form.submit

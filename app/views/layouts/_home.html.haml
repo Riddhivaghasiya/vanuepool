@@ -1,0 +1,105 @@
+%h2.text-center FIND A PERFECT VANUE FOR YOUR EVENT
+.dropdown-align{:style => "align:center;"}
+  .row
+  %select.btn.btn-default.btn-adjst.dropdown-success{:searchable => "Search here.."}
+    %option{:disabled => "disabled",:selected => "selected", :value => "1"} select your vanues
+    %option{:value => "2"} Farm House
+    %option{:value => "3"} party-lawn
+    %option{:value => "4"} Resort
+    %option{:value => "5"} conference-Room
+  %select.btn.btn-default.btn-adjst{:searchable => "Search here.."}
+    %option{:disabled => "disabled", :selected => "selected", :value => "1"} select your event
+    %option{:value => "2"} Wedding/mehndi-ceremony,sangeet-ceremony
+    %option{:value => "3"} Anniversary
+    %option{:value => "4"} birthday-party
+    %option{:value => "5"} baby-shower
+    %option{:value => "6"} Engagement
+    %option{:value => "7"} Reception
+    %option{:value => "8"} Batchler party/Fairwell party
+    %option{:value => "9"} Social-gathering
+    %option{:value => "10"} Office party
+    %option{:value => "11"} kitty-party
+    %option{:value => "12"} cocktail-party
+    %option{:value => "13"} Conference
+    %option{:value => "14"} Meeting
+    %option{:value => "15"} Exhibition
+    %option{:value => "16"} Fairs
+    %option{:value => "17"} team-building
+    %option{:value => "18"} Training
+    %option{:value => "19"} Workshops
+    %option{:value => "20"} Press Conference
+  %input.btn.btn-default.btn-adjst{:name => "vanue_search_page", :type => "submit", :value => "Search"}/
+
+  %section.venue-event-type-images
+    .container.pt-4
+    .row
+      .column
+        %img.image{:alt => "banquet-Hall", :src => "https://www.venuepool.com/images/home-banqt.png"}/
+        = link_to "banquet-hall",vanues_path, class: "vanue_types"
+      .column
+        %img.image{:alt => "Farm-House", :src => "https://www.venuepool.com/images/home-farmhs.png"}/
+        = link_to "Farm-House",vanues_path, class: "vanue_types"
+      .column
+        %img.image{:alt => "Party-Lawn", :src => "https://www.venuepool.com/images/home-lwn.png" }/
+        = link_to "Party-Lawn",vanues_path, class: "vanue_types"
+      .column
+        %img.image{:alt => "conference-Room", :src => "https://www.venuepool.com/images/home-confrnce.png"}/
+        = link_to "conference-Room",vanues_path, class: "vanue_types"
+      .column
+        %img.image{:alt => "Resort", :src => "https://www.venuepool.com/images/home-resot.png",}/
+        = link_to "Resort",vanues_path, class: "vanue_types"
+      .column
+        %img.image{:alt => "others", :src => "https://www.venuepool.com/images/other-venue.png",}/
+        = link_to "others",vanues_path, class: "vanue_types"
+  %section.venue-how-it-works.pt-4
+    .container
+      .row.venue-prcs-mrgn
+        .col-md-12.text-center
+          %span.bsc-txt How It Works
+        .col-md-12.otherwise
+          %p.venue-hr-text   You are three steps away   
+        .col-md-12
+          .row.venue-work-cntnt
+            .col-md-4
+              .row
+                .col-md-12.text-center
+                  %img{:alt => "big venues in india", :src => "https://www.venuepool.com/images/browse-venue.png"}/
+                .col-md-12.venue-prcs-hd
+                  %h4.venue-ornge-clr-txt Choose Venues &amp; Services
+                .col-md-12.venue-prcs-sb-hd
+                  %p.primary-text
+                    Experience and shortlist
+                    %br/
+                    Venues &amp; Services
+            .col-md-4
+              .col-md-12.text-center
+                %img{:alt => "venue for weddings", :src => "https://www.venuepool.com/images/request-quote.png"}/
+              .col-md-12.venue-prcs-hds
+                %h4.venue-ornge-clr-txt Request Assistance
+              .col-md-12.venue-prcs-sb-hd
+                %p.primary-text
+                  Assistance by our experts
+                  %br/
+                  Absolutely Free !
+            .col-md-4
+              .col-md-12.text-center
+                %img{:alt => "venue for weddings", :src => "https://www.venuepool.com/images/book-venue.png"}/
+              .col-md-12.venue-prcs-hd
+                %h4.venue-ornge-clr-txt Book Venues &amp; Services
+              .col-md-12.venue-prcs-sb-hd
+                %p.primary-text
+                  Complete Booking Assistance
+                  %br>/
+                  Quick and Hassle free Booking
+  %section.list-ur-business
+    .container
+      .row.venue-business-list
+        .col-md-2  
+        .col-md-8
+          .row
+            .col-md-12.list-img
+              %img.img-responsive{:src => "https://www.venuepool.com/images/list-business.jpg"}/
+  .col-md-12.list-hd.text-center
+    %span Register a venue on Vanuepool
+  .col-md-12.list-hd.text-center
+    = link_to "vanue", owners_path, class: "btn btn-danger"

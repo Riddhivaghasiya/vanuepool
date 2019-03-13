@@ -1,0 +1,43 @@
+%section.header
+  %nav.navbar.navbar-expand-lg.navbar-light{:class => "> <a class=", :href => "#", "navbar-brand" => ""}
+    %a.navbar-brand{:href => "#"} Vanuepool
+
+    %button.navbar-toggler{"aria-controls" => "navbarNavDropdown", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNavDropdown", "data-toggle" => "collapse", :type => "button"}
+      %span.navbar-toggler-icon
+    #navbarNavDropdown.collapse.navbar-collapse
+      %ul.navbar-nav
+        %li.nav-item.dropdown
+          %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            City
+          .dropdown-menu{"aria-labelledby" => "navbarDropdownMenuLink"}
+            %a.dropdown-item{:href => "#"} surat
+        %li.nav-item.dropdown
+          %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            Vanues
+          .dropdown-menu{"aria-labelledby" => "navbarDropdownMenuLink"}
+            %a.dropdown-item{:href => "#"} Farm House
+            %a.dropdown-item{:href => "#"} Party Lawn
+            %a.dropdown-item{:href => "#"} Resort
+            %a.dropdown-item{:href => "#"} Conference Room
+        %li.nav-item.dropdown
+          %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            Services
+          .dropdown-menu{"aria-labelledby" => "navbarDropdownMenuLink"}
+            %a.dropdown-item{:href => "#"} Indor
+            %a.dropdown-item{:href => "#"} Outdor
+            %a.dropdown-item{:href => "#"} Parking Area
+            %a.dropdown-item{:href => "#"} Catering
+            %a.dropdown-item{:href => "#"} DJ
+            %a.dropdown-item{:href => "#"} Internet
+            %a.dropdown-item{:href => "#"} Photographer
+            %a.dropdown-item{:href => "#"} Decorators
+            %a.dropdown-item{:href => "#"} Swimming Pool
+        %li.nav-item
+          %a.nav-link{:href => "#"} Blog
+        %li.nav-item
+          %a.nav-link{:href => "#"} Why us?
+        %li.nav-item
+          %li
+            = link_to "Login", new_user_session_path
+          %li
+            = link_to "sign Up", new_user_registration_path

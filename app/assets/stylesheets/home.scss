@@ -1,0 +1,199 @@
+.body {
+  background-color: #fff;
+  // background-image: url(background1.jpg);
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  min-height: 100%;
+}
+
+.dropdown-align{
+  left: 50%;
+  right: auto;
+  text-align: center;
+  // background-color: #3498DB;
+  color: white;
+  // padding: 16px;
+  font-size: 16px;
+  border: none;
+  // transform: translate(-50%, 0);
+}
+.btn{
+  background-color:#5F9EA0;
+}
+.h2{
+  left: 50%;
+  right: auto;
+  text-align: center;
+  // background-color: #3498DB;
+  color: white;
+  // padding: 16px;
+  font-size: 16px;
+  border: none;
+  // transform: translate(-50%, 0);
+
+}
+
+.nav-item{
+  text-align: right;
+}
+.venue-hdngs-txt{
+  color:#000;
+}
+
+.header{
+  background-color: #5F9EA0;
+
+}
+.text-center{
+  color:#000000;
+}
+
+.bsc-txt {
+    font-size: 36px;
+    color: #222;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+  }
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px -7px 0;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+label {
+  display: block;
+}
+#navbarNavDropdown{
+  letter-spacing:1px;
+
+}
+.venue-hr-text {
+    font-size: 26px !important;
+}
+.venue-hr-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    color: #fe3e01;
+    font-weight: 400;
+}
+p {
+    margin: 0 0 10px;
+}
+
+.venue-ornge-clr-txt {
+    color: #fe3e01;
+}
+.h4 {
+    font-size: 19px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+
+}
+
+.primary-text {
+    font-size: 16px;
+    color: #222222;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+}
+.venue-page-brk-bnnr {
+    // background-image: url();
+    background-size: cover;
+}
+.list-hd {
+    font-size: 30px;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    color: #222222;
+    margin-bottom: 10px;
+}
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 4%;
+  transition: .5s;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover.image {
+  opacity: 0.3;
+}
+
+.containe:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+// .venue-event-type-images{
+//   width: 200px;
+//   height: 120px;
+//   margin:5%
+// }
+.venue-footer-txt a {
+    color: #f2f2f2b8;
+    font-size: 14px;
+    font-family: Lato;
+    text-decoration: none;
+}
+.page-footer{
+  background-color:#3B3838;
+}
+.vanue_types{
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+}
+.form {
+  display: block;
+  margin-top: 0em;
+}
+.body {
+  font-family: 'Lato', sans-serif;
+}

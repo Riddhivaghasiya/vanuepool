@@ -1,0 +1,34 @@
+%p#notice= notice
+%p
+  %strong Name:
+  = @vanue.name
+%p
+  %strong Address:
+  = @vanue.address
+%p
+  %strong State:
+  = @vanue.state
+%p
+  %strong City:
+  = @vanue.city
+%p
+  %strong Area:
+  = @vanue.area
+%p
+  %strong Latitude:
+  = @vanue.latitude
+%p
+  %strong Longitude:
+  = @vanue.longitude
+%p
+  %strong Guest capacity:
+  = @vanue.guest_capacity
+%p
+  %strong Prize:
+  = @vanue.prize
+%p
+  %strong Description:
+  = @vanue.description
+= link_to 'Edit', edit_vanue_path(@vanue)
+|
+= link_to 'Back', vanues_path

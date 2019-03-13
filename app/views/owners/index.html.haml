@@ -1,0 +1,22 @@
+%p#notice= notice
+%h1 Owners
+%table
+  %thead
+    %tr
+      %th Name
+      %th Email
+      %th Contact no
+      %th Address
+      %th{:colspan => "3"}
+  %tbody
+    - @owners.each do |owner|
+      %tr
+        %td= owner.name
+        %td= owner.email
+        %td= owner.contact_no
+        %td= owner.address
+        %td= link_to 'Show', owner
+        %td= link_to 'Edit', edit_owner_path(owner)
+        %td= link_to 'Destroy', owner, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Owner', new_owner_path

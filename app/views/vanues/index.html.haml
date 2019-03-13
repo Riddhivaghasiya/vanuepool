@@ -1,0 +1,34 @@
+%p#notice= notice
+%h1 Vanues
+%table
+  %thead
+    %tr
+      %th Name
+      %th Address
+      %th State
+      %th City
+      %th Area
+      %th Latitude
+      %th Longitude
+      %th Guest capacity
+      %th Prize
+      %th Description
+      %th{:colspan => "3"}
+  %tbody
+    - @vanues.each do |vanue|
+      %tr
+        %td= vanue.name
+        %td= vanue.address
+        %td= vanue.state
+        %td= vanue.city
+        %td= vanue.area
+        %td= vanue.latitude
+        %td= vanue.longitude
+        %td= vanue.guest_capacity
+        %td= vanue.prize
+        %td= vanue.description
+        %td= link_to 'Show', vanue
+        %td= link_to 'Edit', edit_vanue_path(vanue)
+        %td= link_to 'Destroy', vanue, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Vanue', new_vanue_path

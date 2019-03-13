@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  owner_id: 1
+  vanue_id: 1
+  start_date: 2018-10-17 14:58:04
+  end_date: 2018-10-17 14:58:04
+  prize: 9.99
+
+two:
+  user_id: 1
+  owner_id: 1
+  vanue_id: 1
+  start_date: 2018-10-17 14:58:04
+  end_date: 2018-10-17 14:58:04
+  prize: 9.99
